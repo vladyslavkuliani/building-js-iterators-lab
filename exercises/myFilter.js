@@ -1,8 +1,12 @@
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Filter
-function myFilter(arr, callback) {
-
-//  CODE INSIDE HERE   //
-
+Array.prototype.myFilter = function(callback){
+  var result =[];
+  for(var i=0; i<this.length; i++){
+    if(callback(this[i])){
+     result.push(this[i]);
+    }
+  }
+  return result;
 }
 
 /*
